@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CardNav from '../components/CardNav';
-import MovieList from '../components/MovieList'
 import data from '/Users/phaze/Desktop/Devmountain/specializations/week-11/user-directory/user-directory/src/data';
 import './styles.css'
 
@@ -29,7 +28,6 @@ class UserInfo extends Component{
             : this.setState({ ...this.state, index: newIndex })
     }
 
-
     render() {
         const { data, employeeTotal } = this.state
         return (
@@ -53,7 +51,11 @@ class UserInfo extends Component{
                                 </div>
                                 <div className='movieList'>
                                     <strong>Favorite Movies:</strong>
-                                    <MovieList data={data} index={index} />
+                                    <ol>
+                                        <li>{employee.favoriteMovies[0]}</li>
+                                        <li>{employee.favoriteMovies[1]}</li>
+                                        <li>{employee.favoriteMovies[2]}</li>
+                                    </ol>
                                 </div>
                             </div>
                         ) : (
@@ -62,7 +64,10 @@ class UserInfo extends Component{
                     })}
                     
                 </div>
-                <CardNav lastButton={this.lastButton} nextButton={this.nextButton}/>
+                <CardNav
+                    lastButton={this.lastButton}
+                    nextButton={this.nextButton}
+                />
             </div>
         )
     }

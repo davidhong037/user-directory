@@ -23,8 +23,7 @@
     background-position: center;
     width: 75%;
     padding: 25px 0px 60px 40px;
-    margin: auto;
-    
+    margin: auto;    
 }
 
 .card .cardCounter {
@@ -63,7 +62,6 @@
     justify-content: space-around;
     padding: 2vh;
 }
-
 
 .cardContainer .prevBtn {
     background-color: black;
